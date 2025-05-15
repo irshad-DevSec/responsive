@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malaysia Moving Experts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+https://cdnjs.cloudflare.com 'unsafe-inline';font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    .content-wrapper {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 0 auto;
+      padding: 0;
+      max-width: 1200px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    header {
+      background: #004aad;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    header h1 { font-size: 1.8rem; font-weight: 800; }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    .slider-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 40px;
+      background: #e0f0ff;
+    }
+    .slider { width: 100%; max-width: 60%; margin: auto; }
+    .slider img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .quotes {
+      width: 100%;
+      max-width: 35%;
+      padding-left: 20px;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #004aad;
+      margin: auto;
+    }
+
+    section { padding: 60px 40px; }
+    .section-title {
+      font-size: 2rem;
+      color: #004aad;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .boxes {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .box {
+      flex: 1;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-width: 250px;
+    }
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    }
+    .box h3 { color: #004aad; margin-bottom: 15px; }
+
+    .form-container {
+      background: #e0f0ff;
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      background: #004aad;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover { background: #00327f; }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 9999;
+      text-decoration: none;
+      font-size: 28px;
+    }
+
+    @media (max-width: 768px) {
+      .slider-section { flex-direction: column; }
+      .slider, .quotes { max-width: 100%; padding: 0; }
+      nav { flex-direction: column; }
+      nav a { display: block; margin: 10px 0; }
+      .boxes { flex-direction: column; align-items: center; }
+      .box { width: 100%; max-width: 400px; }
+    }
+
+#service-area {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.service-area-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-column {
+  flex: 1;
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 1rem;
+  border-left: 1px solid #ccc;
+  padding-left: 30px;
+  min-width: 300px;
+}
+
+.service-column:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.service-column h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #004aad;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #004aad;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-area-container {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .service-column {
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+  }
+  .service-column p {
+    font-size: 0.95rem;
+  }
+}
+
+#our-services {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 960px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  background: #cce5ff;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.service-header {
+  background: #0056d2;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 15px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 4px solid #aad1ff;
+  border-radius: 10px 10px 0 0;
+}
+
+.service-desc {
+  padding: 20px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-box {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+.budget-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.package-box {
+  background: #cce5ff;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+.package-header {
+  background: #0056d2;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 15px 10px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  text-transform: uppercase;
+}
+
+.package-content {
+  padding: 20px 15px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #000;
+  flex-grow: 1;
+}
+
+.package-content p:last-child {
+  margin-top: 15px;
+}
+
+.whatsapp-btn {
+  width: 48px;
+  height: 48px;
+  background: #25D366;
+  border-radius: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.whatsapp-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.whatsapp-btn:hover {
+  background: #128c4a;
+}
+
+@media (max-width: 768px) {
+  .budget-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .package-box {
+    width: 90%;
+    max-width: 350px;
+    margin-bottom: 25px;
+  }
+}
+
+
+.quote-buttons {
+  margin-top: 150px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.call-button, .whatsapp-button-inline {
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+.call-button {
+  background-color: #004aad;
+}
+
+.call-button:hover {
+  background-color: #00327f;
+}
+
+.whatsapp-button-inline {
+  background-color: #25D366;
+}
+
+.whatsapp-button-inline:hover {
+  background-color: #128c4a;
+}
+
+.contact {
+            background: #f0f4f8;
+            padding: 4rem 2rem;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .contact button {
+            background: #1e3c72;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .contact button:hover {
+            background: #005bb5;
+        }
+        footer {
+            background: #001f3f;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+
+  </style>
+</head>
+<body>
+  <div class="content-wrapper">
+    <header>
+      <h1>Malaysia Moving Experts</h1>
+      <nav>
+        <a href="#our-services">Services</a>
+        <a href="#budget-packages">Packages</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="slider-section">
+      <div class="slider">
+        <div><img src="images/slide1.jpg" alt="Moving Image 1"></div>
+        <div><img src="images/slide2.jpg" alt="Moving Image 2"></div>
+        <div><img src="images/slide3.jpg" alt="Moving Image 3"></div>
+      </div>
+      <div class="quotes">
+        <p>"Fast, reliable, and budget-friendly moving services."</p>
+        <p>"Ready to Move? Message us now and get your quote in minutes!"</p>
+      </div>
+<!-- Overlay Buttons -->
+    <div class="hero-overlay" style="position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%); display: flex; gap: 15px; z-index: 10;">
+        <a href="tel:+60122192103" 
+           style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 5px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            <i class="fas fa-phone"></i> Call: 012 219 2103
+        </a>
+        <a href="https://wa.me/60122192103?text=Hello%20MR.Lori%20,%20I%20am%20interested%20to%20know%20more%20details%20about%20the%20packages%20and%20prices." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           style="background-color: rgba(37, 211, 102, 0.9); color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 5px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+            <i class="fab fa-whatsapp"></i> WhatsApp Sekarang
+        </a>
+    </div>
+
+
+    </div>
+
+    <section id="our-services">
+  <h2 class="section-title">Our Services</h2>
+  <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+    Here at MrLori, we provide professional house moving services in KL as well as prompt and experienced moving solutions for offices and businesses. Our team is committed towards providing timely and attentive moving house services.
+  </p>
+  <div class="services-container">
+    <div class="service-box">
+      <div class="service-header">OFFICE MOVING</div>
+      <div class="service-desc">
+        Secure and efficient office relocation tailored to your business needs.
+      </div>
+    </div>
+    <div class="service-box">
+      <div class="service-header">RESIDENTIAL MOVING</div>
+      <div class="service-desc">
+        Professional moving solutions to make your home transition smooth.
+      </div>
+    </div>
+    <div class="service-box">
+      <div class="service-header">BULK DISPOSAL</div>
+      <div class="service-desc">
+        Eco-friendly and hassle-free disposal of large items and waste.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="service-area">
+  <h2 class="section-title">Service Area 📍</h2>
+  <div class="service-area-container">
+    <div class="service-column">
+      <h3>Lori Sewa Selangor:</h3>
+      <p>Ampang, Bandar Baru Bangi, Bandar Puncak Alam, Banting, Batang Kali, Batu Arang, Batu Caves, Beranang, Bestari Jaya, Bukit Rotan, Cheras, Cyberjaya, Dengkil, Hulu Langat, Jenjarom, Jeram, Kajang, Kapar, Kerling, Klang, KLIA, Kuala Kubu Baru, Kuala Selangor, Kuang, Pelabuhan Klang, Petaling Jaya, Puchong, Pulau Carey, Pulau Indah, Pulau Ketam, Rasa, Rawang, Sabak Bernam, Sekinchan, Semenyih, Sepang, Serdang, Serendah, Seri Kembangan, Shah Alam, Subang Jaya, Sungai Ayer Tawar, Sungai Besar, Sungai Buloh, Sungai Pelek, Tanjong Karang, Tanjong Sepat, Telok Panglima Garang</p>
+    </div>
+    <div class="service-column">
+      <h3>Lori Sewa Kuala Lumpur:</h3>
+      <p>Ampang, Batu Caves, Cheras, Damansara, Gombak, Hulu Kelang, Kepong, Kuala Lumpur, Petaling, Petaling Jaya, Sentul, Setapak, Sungai Besi</p>
+    </div>
+  </div>
+</section>
+    <section id="budget-packages" style="background:#eee; padding:40px 20px;">
+  <h2 style="text-align:center; font-weight:700; margin-bottom:10px;">Budget Packages</h2>
+  <p style="text-align:center; margin-bottom:30px;">1 Trip: Point A to point B with the distance up to 15km in Klang Valley</p>
+  <div class="budget-container">
+    <div class="package-box">
+      <div class="package-header">1 TON LORRY</div>
+      <div class="package-content">
+        <p>RM250.00<br>
+        1 Tonne (9ft) Lorry with 2 movers<br>
+        1 trip from point A to point B – moving distance within 15km around Klang Valley</p>
+        <p>
+          * Not applicable for moving heavy items<br>
+          * Not include additional services<br>
+          * Payment term: Cash / online instant transfer upon delivery
+        </p>
+      </div>
+      <div class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </div>
+    </div>
+
+    <div class="package-box">
+      <div class="package-header">3 TON LORRY</div>
+      <div class="package-content">
+        <p>RM400.00<br>
+        3 Tonne (14 ft) Lorry with 3 movers<br>
+        1 trip from point A to point B – moving distance within 15km around Klang Valley</p>
+        <p>
+          * Not applicable for moving heavy items<br>
+          * Not include additional services<br>
+          * Payment term: Cash / online instant transfer upon delivery
+        </p>
+      </div>
+      <div class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </div>
+    </div>
+
+    <div class="package-box">
+      <div class="package-header">5 TON LORRY</div>
+      <div class="package-content">
+        <p>RM500.00<br>
+        5 Tonne (17 ft) Lorry with 3 movers<br>
+        1 trip from point A to point B – moving distance within 15km around Klang Valley</p>
+        <p>
+          * Not applicable for moving heavy items<br>
+          * Not include additional services<br>
+          * Payment term: Cash / online instant transfer upon delivery
+        </p>
+      </div>
+      <div class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="budget-packages" style="background:#eee; padding:40px 20px;">
+  <h2 style="text-align:center; font-weight:700; margin-bottom:10px;">Budget Packages</h2>
+  <p style="text-align:center; margin-bottom:30px;">1 Trip: Point A to point B with the distance up to 15km in Klang Valley</p>
+  <div class="budget-container">
+    <div class="package-box">
+      <div class="package-header">1 TON LORRY</div>
+      <div class="package-content">
+        <p>RM250.00<br>
+        1 Tonne (9ft) Lorry with 2 movers<br>
+        1 trip from point A to point B – moving distance within 15km around Klang Valley</p>
+        <p>
+          * Not applicable for moving heavy items<br>
+          * Not include additional services<br>
+          * Payment term: Cash / online instant transfer upon delivery
+        </p>
+      </div>
+      <div class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </div>
+    </div>
+
+    <div class="package-box">
+      <div class="package-header">3 TON LORRY</div>
+      <div class="package-content">
+        <p>RM400.00<br>
+        3 Tonne (14 ft) Lorry with 3 movers<br>
+        1 trip from point A to point B – moving distance within 15km around Klang Valley</p>
+        <p>
+          * Not applicable for moving heavy items<br>
+          * Not include additional services<br>
+          * Payment term: Cash / online instant transfer upon delivery
+        </p>
+      </div>
+      <div class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </div>
+    </div>
+
+    <div class="package-box">
+      <div class="package-header">5 TON LORRY</div>
+      <div class="package-content">
+        <p>RM500.00<br>
+        5 Tonne (17 ft) Lorry with 3 movers<br>
+        1 trip from point A to point B – moving distance within 15km around Klang Valley</p>
+        <p>
+          * Not applicable for moving heavy items<br>
+          * Not include additional services<br>
+          * Payment term: Cash / online instant transfer upon delivery
+        </p>
+      </div>
+      <div class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="budget-packages" style="background:#eee; padding:40px 20px;">
+  <h2 style="text-align:center; font-weight:700; margin-bottom:10px;">Budget Packages</h2>
+  <p style="text-align:center; margin-bottom:30px;">1 Trip: Point A to point B with the distance up to 15km in Klang Valley</p>
+  <div class="budget-container">
+    <div class="package-box">
+      <div class="package-header">1 TON LORRY</div>
+      <div class="package-content">
+        <p>RM250.00<br>
+        1 Tonne (9ft) Lorry with 2 movers<br>
+        1 trip from point A to point B – moving distance within 15km around Klang Valley</p>
+        <p>
+          * Not applicable for moving heavy items<br>
+          * Not include additional services<br>
+          * Payment term: Cash / online instant transfer upon delivery
+        </p>
+      </div>
+      <div class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </div>
+    </div>
+
+    <div class="package-box">
+      <div class="package-header">3 TON LORRY</div>
+      <div class="package-content">
+        <p>RM400.00<br>
+        3 Tonne (14 ft) Lorry with 3 movers<br>
+        1 trip from point A to point B – moving distance within 15km around Klang Valley</p>
+        <p>
+          * Not applicable for moving heavy items<br>
+          * Not include additional services<br>
+          * Payment term: Cash / online instant transfer upon delivery
+        </p>
+      </div>
+      <div class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </div>
+    </div>
+
+    <div class="package-box">
+      <div class="package-header">5 TON LORRY</div>
+      <div class="package-content">
+        <p>RM500.00<br>
+        5 Tonne (17 ft) Lorry with 3 movers<br>
+        1 trip from point A to point B – moving distance within 15km around Klang Valley</p>
+        <p>
+          * Not applicable for moving heavy items<br>
+          * Not include additional services<br>
+          * Payment term: Cash / online instant transfer upon delivery
+        </p>
+      </div>
+      <div class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="why">
+      <h2 class="section-title">Why Choose Us</h2>
+      <ul style="max-width: 700px; margin: auto; font-size: 1.1rem;">
+        <li>✔️ Experienced and professional movers</li>
+        <li>✔️ Affordable and transparent pricing</li>
+        <li>✔️ Timely and efficient service</li>
+        <li>✔️ Safe handling of all items</li>
+        <li>✔️ Friendly and responsive customer service</li>
+      </ul>
+    </section>
+
+<section id="why-choose-us" style="display: flex; align-items: center; justify-content: space-between; padding: 4rem 2rem; gap: 2rem;">
+    <div style="flex: 1;">
+        <h2>Why Choose MrLori</h2>
+        <p>There are several reasons for choosing MrLori over other companies when it comes to house or office relocation. We are experienced movers that have been working in the niche for over a decade. Our company approaches each customer individually, providing the best service and work according to your unique needs.</p>
+        <li>✔️ Experienced and professional movers</li>
+        <li>✔️ Affordable and transparent pricing</li>
+        <li>✔️ Timely and efficient service</li>
+        <li>✔️ Safe handling of all items</li>
+        <li>✔️ Friendly and responsive customer service</li>
+        <h3>Contact Information</h3>
+        <p style="margin-bottom: 0.5rem;">📞 Phone: +6012-219 2103</p>
+        <p>✉️ Email: <a href="mailto:mrlori.com@gmail.com">mrlori.com@gmail.com</a></p>
+    </div>
+    <div style="flex: 1;">
+        <img src="whymrlori.jpg" alt="Handshake with Moving Team" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+    </div>
+</section>
+
+
+    <section id="contact" class="contact" style="background: linear-gradient(135deg, #1e3c72, #3b5998); padding: 4rem 2rem; color: white;">
+        <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Contact Us</h2>
+        <p style="text-align: center; margin-bottom: 2rem; font-size: 1.2rem;">Feel free to call us anytime to inquire about prices, services, and locations or send us an email using the form below.</p>
+        <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
+            <button style="background: white; color: #004080; padding: 1rem 2rem; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: background 0.3s ease;">
+                📞 Call Us
+            </button>
+            <button style="background: white; color: #25D366; padding: 1rem 2rem; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: background 0.3s ease;" onclick="window.open('https://wa.me/97477149227?text=Hello%20MR.Lori%20,%20I%20am%20interested%20to%20know%20more%20details%20about%20the%20packages%20and%20prices.', '_blank')" rel="noopener noreferrer">
+                💬 WhatsApp
+            </button>
+        </div>
+        <form style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); color: #333;" autocomplete="off" action="/submit-form" method="POST">
+    <input type="hidden" name="csrf_token" value="{{csrf_token}}">
+    <!-- Updated Grid Gap for Horizontal Spacing -->
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 20px;">
+        <div>
+            <label for="name" style="display: block; font-size: 1rem; margin-bottom: 5px;">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required minlength="3" maxlength="50" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+        </div>
+        <div>
+            <label for="email" style="display: block; font-size: 1rem; margin-bottom: 5px;">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+        </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 20px;">
+        <div>
+            <label for="pickup" style="display: block; font-size: 1rem; margin-bottom: 5px;">Pick Up Location</label>
+            <input type="text" id="pickup" name="pickup" placeholder="Pick Up Location" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+        </div>
+        <div>
+            <label for="dropoff" style="display: block; font-size: 1rem; margin-bottom: 5px;">Drop Off Location</label>
+            <input type="text" id="dropoff" name="dropoff" placeholder="Drop Off Location" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+        </div>
+    </div>
+    <div style="margin-bottom: 20px;">
+        <label for="message" style="display: block; font-size: 1rem; margin-bottom: 5px;">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;"></textarea>
+    </div>
+    <button type="submit" style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: background 0.3s ease;">
+        Submit Message
+    </button>
+</form>
+    </section>
+
+<footer style="background: linear-gradient(135deg, #2c3e50, #35424a); color: white; padding: 2rem 1rem; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        <div>
+            <h3 style="margin-bottom: 1rem;">Moving Company</h3>
+            <p>Your Trusted Partner in Moving</p>
+            <p>&copy; 2024 Moving Company. All Rights Reserved.</p>
+        </div>
+        <div>
+            <h4 style="margin-bottom: 1rem;">Quick Links</h4>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#budget-packages" style="color: #ffdd00; text-decoration: none;">Budget Packages</a></li>
+                <li><a href="#premium-packages" style="color: #ffdd00; text-decoration: none;">Premium Packages</a></li>
+                <li><a href="#all-in-one" style="color: #ffdd00; text-decoration: none;">All In One</a></li>
+                <li><a href="#contact" style="color: #ffdd00; text-decoration: none;">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 style="margin-bottom: 1rem;">Contact Us</h4>
+            <p><i class="fas fa-phone" style="margin-right: 5px;"></i>Phone: <a href="tel:+60122192103" style="color: #ffdd00; text-decoration: none;">+6012-219 2103</a></p>
+            <p><i class="fas fa-envelope" style="margin-right: 5px;"></i>Email: <a href="mailto:mrlori.com@gmail.com" style="color: #ffdd00; text-decoration: none;">mrlori.com@gmail.com</a></p>
+        </div>
+        <div>
+            <h4 style="margin-bottom: 1rem;">Follow Us</h4>
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <a href="#" style="color: white;"><i class="fab fa-facebook" style="font-size: 1.5rem;"></i></a>
+                <a href="#" style="color: white;"><i class="fab fa-instagram" style="font-size: 1.5rem;"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+ </div>
+    </div>
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/97477149227?text=Hello%20MR.Lori%20,%20I%20am%20interested%20to%20know%20more%20details%20about%20the%20packages%20and%20prices" 
+   target="_blank" 
+   style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: #25D366; color: white; padding: 15px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); text-align: center;">
+    <i class="fab fa-whatsapp" style="font-size: 24px;"></i>
+</a>
+<!-- Floating Scroll to Top Button -->
+<button id="scrollToTop" 
+        style="position: fixed; 
+               bottom: 80px; 
+               right: 20px; 
+               z-index: 1000; 
+               background-color: #333; 
+               color: white; 
+               border: none; 
+               width: 50px; /* Set equal width and height */
+               height: 50px; /* Set equal width and height */
+               border-radius: 50%; /* Make it a perfect circle */
+               cursor: pointer; 
+               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+               display: none; 
+               font-size: 20px; /* Ensure font size fits within the button */
+               text-align: center; 
+               line-height: 50px; /* Align icon vertically */
+        ">
+    <i class="fas fa-arrow-up" style="font-size: 20px;"></i>
+</button>
+<!-- Include the External JavaScript File -->
+<script src="scroll.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        dots: true,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+      });
+    });
+  </script>
+</body>
+</html>
